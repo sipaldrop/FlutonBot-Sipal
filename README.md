@@ -20,10 +20,8 @@ Bot otomatis yang kuat untuk ekosistem Fluton, dengan fitur auto-login, check-in
 | Fitur | Deskripsi | Status |
 | :--- | :--- | :--- |
 | **Auto Login** | Login Wallet Signature aman standar Metamask | ✅ |
-| **Check-In Harian** | Klaim hadiah harian otomatis | ✅ |
-| **Penyelesai Tugas** | Otomatis mengerjakan tugas sosial & website | ✅ |
+| **Penyelesai Tugas On-Chain** | Otomatis mengerjakan tugas on-chain | ✅ |
 | **Looping Cerdas** | Mekanisme looping untuk farming poin maksimal | ✅ |
-| **Mode Siluman** | Rotasi User-Agent realistis dan simulasi perilaku | ✅ |
 | **Multi-Akun** | Mendukung banyak akun sekaligus tanpa batas | ✅ |
 | **Logging Sipal** | Tampilan konsol informatif nan indah | ✅ |
 
