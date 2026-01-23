@@ -1,0 +1,8 @@
+node_modules/
+accounts.json
+accounts_tmp.json
+config_tmp.json
+tokens.json
+.DS_Store
+.env
+.vscode/

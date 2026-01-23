@@ -1,0 +1,27 @@
+{
+    "name": "sipal-fluton",
+    "version": "1.0.0",
+    "description": "Sipal Airdrop Community Bot",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "keywords": [
+        "sipal",
+        "airdrop",
+        "fluton"
+    ],
+    "author": "Sipal Airdrop",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^1.6.0",
+        "chalk": "^4.1.2",
+        "cli-table3": "^0.6.3",
+        "ethers": "^6.10.0",
+        "fake-useragent": "^1.0.1",
+        "https-proxy-agent": "^7.0.0",
+        "luxon": "^3.4.0",
+        "inquirer": "^8.2.5"
+    },
+    "type": "commonjs"
+}

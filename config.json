@@ -1,0 +1,65 @@
+{
+    "networks": {
+        "sepolia": {
+            "name": "Ethereum Sepolia",
+            "chainId": 11155111,
+            "rpcUrl": "https://ethereum-sepolia-rpc.publicnode.com",
+            "explorer": "https://sepolia.etherscan.io",
+            "contracts": {
+                "cofheBridge": "0xdF2aCCdC66E9A6b3bC27bbf83842C54eAA2C8C49",
+                "fhevmBridge": "0xB8DBD4BFd2741E95E3Ae6BE76a4b8014E409e7ca",
+                "faucet": "0x0f1c0D23f70DcbcE6D6139B93A1ab0271052e07A"
+            },
+            "tokens": {
+                "USDC": "0x24827f35B1a04c66009adBb207D0415250Fd16da",
+                "DAI": "0x6a978e705f6c3104992cb72714E5eDa41a96E928",
+                "USDT": "0xEDb85a5c17135B82966B686cCC9C28F42078f3E0",
+                "UNI": "0x6a9380b81a176d68fE1b53f5B0FE283E7d83Db00",
+                "XFL": "0xE559bAfec0da476cd245Dd173f26e7b4b197Ca8b",
+                "AAVE": "0xBd0d0C12f9F13AEC9931ff4BC5A6c7f203aD3AaB"
+            }
+        },
+        "arbitrum_sepolia": {
+            "name": "Arbitrum Sepolia",
+            "chainId": 421614,
+            "rpcUrl": "https://sepolia-rollup.arbitrum.io/rpc",
+            "explorer": "https://sepolia.arbiscan.io",
+            "contracts": {
+                "cofheBridge": "0x65CB6b9390c31ae0A1aC77b9Fa39e966Bc1548a3",
+                "faucet": "0x0f1c0D23f70DcbcE6D6139B93A1ab0271052e07A"
+            },
+            "tokens": {
+                "USDC": "0xEc63750335f33117f3f7a43d96aa75235460df57",
+                "USDT": "0xf539C016a7b527621056893Cb05e061509B7cE40",
+                "DAI": "0xFEF1Cc0D465C561a77F76EF8cF6f562F09D460C8",
+                "UNI": "0xF41561BF42418B69791f026a97CF9e4F8BC95703",
+                "XFL": "0x3De45888F17b700E36AC1727A18378dCF4e030b6",
+                "AAVE": "0xF069e4AF0B6Fa84363Cd53380bacE78385Ad1b6B"
+            }
+        },
+        "base_sepolia": {
+            "name": "Base Sepolia",
+            "chainId": 84532,
+            "rpcUrl": "https://sepolia.base.org",
+            "explorer": "https://sepolia.basescan.org",
+            "contracts": {
+                "cofheBridge": "0x638C1654b1ea3B65677f1B295e763778a49A1532",
+                "faucet": "0x0f1c0D23f70DcbcE6D6139B93A1ab0271052e07A"
+            },
+            "tokens": {
+                "USDC": "0x86db0a9184bE890FC254948E414A982258cd1528",
+                "USDT": "0x2a1a79Ae4e6Af8a37566fAf91Fd818B1574d61D7",
+                "DAI": "0xEfaD718634B87C59fdc9eAb27F0AF0543c939dA5",
+                "UNI": "0xF8c2D4B68F93f3E332B30FD32a59d5C5e6358A83",
+                "XFL": "0xF620BCdCE0219cC11fa9ac89Ce6C807d810f0FB2",
+                "AAVE": "0xE25f846f653e4A14B9A175B6a9b6a061698D41a4"
+            }
+        }
+    },
+    "settings": {
+        "loop_delay_min": 60,
+        "loop_delay_max": 180,
+        "tx_delay_min": 10,
+        "tx_delay_max": 30
+    }
+}
