@@ -5,18 +5,38 @@
             "chainId": 11155111,
             "rpcUrl": "https://ethereum-sepolia-rpc.publicnode.com",
             "explorer": "https://sepolia.etherscan.io",
+            "router": "0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E",
+            "wrappedNative": "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14",
             "contracts": {
                 "cofheBridge": "0xdF2aCCdC66E9A6b3bC27bbf83842C54eAA2C8C49",
                 "fhevmBridge": "0xB8DBD4BFd2741E95E3Ae6BE76a4b8014E409e7ca",
                 "faucet": "0x0f1c0D23f70DcbcE6D6139B93A1ab0271052e07A"
             },
+            "coprocessors": ["FHENIX", "ZAMA"],
+            "layerzeroEid": 40161,
             "tokens": {
                 "USDC": "0x24827f35B1a04c66009adBb207D0415250Fd16da",
+                "cUSDC": "0xE4Ba3Eb60283A4955DD6Fb1BD1241d9AA8F6e9B3",
+                "eUSDC": "0xCcB104f7A662eA219b452aD2008e8f4D1C54Bb09",
                 "DAI": "0x6a978e705f6c3104992cb72714E5eDa41a96E928",
+                "cDAI": "0x93EfC2D7e0E0dC2F0A8C2F9e5c8F8dE0f2E3B4A5",
                 "USDT": "0xEDb85a5c17135B82966B686cCC9C28F42078f3E0",
+                "cUSDT": "0xF9a8C5d6B7e8F0A1C2D3E4F5A6B7C8D9E0F1A2B3",
                 "UNI": "0x6a9380b81a176d68fE1b53f5B0FE283E7d83Db00",
+                "cUNI": "0x3C267B5D56B9eDc3e4CC49649528d43e7Edbd121",
+                "eUNI": "0x7F7e2ffFE63b73cBd7603D14f908456E33bE8be5",
                 "XFL": "0xE559bAfec0da476cd245Dd173f26e7b4b197Ca8b",
-                "AAVE": "0xBd0d0C12f9F13AEC9931ff4BC5A6c7f203aD3AaB"
+                "cXFL": "0x353550e34A09A7030F48DA00f7745547fadE6AFc",
+                "eXFL": "0x506348cB889ce902fF6c29F042CbD48bBa01DA40",
+                "AAVE": "0xBd0d0C12f9F13AEC9931ff4BC5A6c7f203aD3AaB",
+                "cAAVE": "0xd3D6B9dd47092Ffc217c7F1FD26AccD855562986",
+                "eAAVE": "0x42a57eE9650a5624147273E57C994C7DEa1B7e14",
+                "TSLA": "0x6Cc810b1C3e4Ff21D0F0b94cC043c33cb35d5a9f",
+                "cTSLA": "0xD6d78361aa1f2067216A6Fc53398C695C32ec80C",
+                "GOLD": "0x4Fd5682BF037116530D1C3F86F65038f4B233cD9",
+                "cGOLD": "0xa15162cEa5382c5b307356d74399aae7180770e7",
+                "SILVER": "0x6Cc810b1C3e4Ff21D0F0b94cC043c33cb35d5a9f",
+                "cSILVER": "0x2C480E8Aa9b49f94E5970d7fF3404fd41aaD4CC0"
             }
         },
         "arbitrum_sepolia": {
@@ -24,17 +44,33 @@
             "chainId": 421614,
             "rpcUrl": "https://sepolia-rollup.arbitrum.io/rpc",
             "explorer": "https://sepolia.arbiscan.io",
+            "router": "0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E",
+            "wrappedNative": "0x980B62Da83eFf3D4576C647993b0c1D7faf17c73",
             "contracts": {
                 "cofheBridge": "0x65CB6b9390c31ae0A1aC77b9Fa39e966Bc1548a3",
                 "faucet": "0x0f1c0D23f70DcbcE6D6139B93A1ab0271052e07A"
             },
+            "coprocessors": ["FHENIX"],
+            "layerzeroEid": 40231,
             "tokens": {
                 "USDC": "0xEc63750335f33117f3f7a43d96aa75235460df57",
+                "eUSDC": "0x61255666e2d40f969902565ea3ba9fab8b32cd9a",
                 "USDT": "0xf539C016a7b527621056893Cb05e061509B7cE40",
+                "eUSDT": "0xF9a8C5d6B7e8F0A1C2D3E4F5A6B7C8D9E0F1A2B3",
                 "DAI": "0xFEF1Cc0D465C561a77F76EF8cF6f562F09D460C8",
+                "eDAI": "0x93EfC2D7e0E0dC2F0A8C2F9e5c8F8dE0f2E3B4A5",
                 "UNI": "0xF41561BF42418B69791f026a97CF9e4F8BC95703",
+                "eUNI": "0x189dC7eAAE2dEe0579652AEa4422e86CB3d8FDd8",
                 "XFL": "0x3De45888F17b700E36AC1727A18378dCF4e030b6",
-                "AAVE": "0xF069e4AF0B6Fa84363Cd53380bacE78385Ad1b6B"
+                "eXFL": "0x03a2C10b03d04A921D6C3954E02c3202f7a8191D",
+                "AAVE": "0xF069e4AF0B6Fa84363Cd53380bacE78385Ad1b6B",
+                "eAAVE": "0x353EA08f9cEB8b23A3496e6A24C019Ebb091AcA6",
+                "TSLA": "0x39233c471E90Fd6Aa78BF4a9eDF225E5B203a2e5",
+                "eTSLA": "0x60E8AEfC7B9fc6062526c7eb31C0F5074317d108",
+                "GOLD": "0xee3a0800DD525EE653fcAE68F01168B7bE0501aB",
+                "eGOLD": "0x57008194B842f6108DaFBfaD00056218f47835E3",
+                "SILVER": "0xF569793307A26D74a26f725FE77972684aF212D4",
+                "eSILVER": "0x18925C0c77265eCC81E1c98aAFCB8B7E8023C4b6"
             }
         },
         "base_sepolia": {
@@ -42,24 +78,83 @@
             "chainId": 84532,
             "rpcUrl": "https://sepolia.base.org",
             "explorer": "https://sepolia.basescan.org",
+            "router": "0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E",
+            "wrappedNative": "0x4200000000000000000000000000000000000006",
             "contracts": {
-                "cofheBridge": "0x638C1654b1ea3B65677f1B295e763778a49A1532",
+                "cofheBridge": "0x0f1c0D23f70DcbcE6D6139B93A1ab0271052e07A",
                 "faucet": "0x0f1c0D23f70DcbcE6D6139B93A1ab0271052e07A"
             },
+            "coprocessors": ["FHENIX"],
+            "layerzeroEid": 40245,
             "tokens": {
                 "USDC": "0x86db0a9184bE890FC254948E414A982258cd1528",
+                "eUSDC": "0x189dC7eAAE2dEe0579652AEa4422e86CB3d8FDd8",
                 "USDT": "0x2a1a79Ae4e6Af8a37566fAf91Fd818B1574d61D7",
+                "eUSDT": "0xF9a8C5d6B7e8F0A1C2D3E4F5A6B7C8D9E0F1A2B3",
                 "DAI": "0xEfaD718634B87C59fdc9eAb27F0AF0543c939dA5",
+                "eDAI": "0x93EfC2D7e0E0dC2F0A8C2F9e5c8F8dE0f2E3B4A5",
                 "UNI": "0xF8c2D4B68F93f3E332B30FD32a59d5C5e6358A83",
+                "eUNI": "0x189dC7eAAE2dEe0579652AEa4422e86CB3d8FDd8",
                 "XFL": "0xF620BCdCE0219cC11fa9ac89Ce6C807d810f0FB2",
-                "AAVE": "0xE25f846f653e4A14B9A175B6a9b6a061698D41a4"
+                "eXFL": "0x02875082E053BAF0A3563E27cB26D846F1994199",
+                "AAVE": "0xE25f846f653e4A14B9A175B6a9b6a061698D41a4",
+                "eAAVE": "0x638C1654b1ea3B65677f1B295e763778a49A1532",
+                "TSLA": "0x14E75689741644CcdcdF302A6fD45BE46FA58DE8",
+                "eTSLA": "0x77013FE4db98BB40B8d3f69E234bD59C2D3a575D",
+                "GOLD": "0x1f23963fa6735E06802A33E58C3D9A970CffB849",
+                "eGOLD": "0xe467885Dd39Ae8c0bc675CF8ff3875405d594aE4",
+                "SILVER": "0x7d561e7a14338Efa5542c019BB17488280BDBECD",
+                "eSILVER": "0xAA01A7f668B2a61CFf6e16D02a01C82900f26957"
             }
+        },
+        "optimism_sepolia": {
+            "name": "Optimism Sepolia",
+            "chainId": 11155420,
+            "rpcUrl": "https://sepolia.optimism.io",
+            "explorer": "https://sepolia-optimism.etherscan.io",
+            "router": "0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E",
+            "wrappedNative": "0x4200000000000000000000000000000000000006",
+            "contracts": {
+                "faucet": "0x0f1c0D23f70DcbcE6D6139B93A1ab0271052e07A"
+            },
+            "tokens": {}
+        },
+        "scroll_sepolia": {
+            "name": "Scroll Sepolia",
+            "chainId": 534351,
+            "rpcUrl": "https://sepolia-rpc.scroll.io",
+            "explorer": "https://sepolia.scrollscan.com",
+            "router": "0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E",
+            "wrappedNative": "0x5300000000000000000000000000000000000004",
+            "contracts": {
+                "faucet": "0x0f1c0D23f70DcbcE6D6139B93A1ab0271052e07A"
+            },
+            "tokens": {}
         }
     },
     "settings": {
         "loop_delay_min": 60,
         "loop_delay_max": 180,
         "tx_delay_min": 10,
-        "tx_delay_max": 30
+        "tx_delay_max": 30,
+        "enable_rwa_tokens": true,
+        "enable_confidential_tokens": true
+    },
+    "rwa_tokens": {
+        "description": "Real World Assets - NEW Feature (Jan 2026)",
+        "tokens": ["TSLA", "GOLD", "SILVER"],
+        "enabled": true
+    },
+    "coprocessors": {
+        "FHENIX": {
+            "description": "Fhenix CoFHE - Fully Homomorphic Encryption",
+            "prefix": "e",
+            "networks": ["sepolia", "arbitrum_sepolia", "base_sepolia"]
+        },
+        "ZAMA": {
+            "description": "Zama FHEVM - Confidential Computing",
+            "prefix": "c",
+            "networks": ["sepolia"]
+        }
     }
 }
