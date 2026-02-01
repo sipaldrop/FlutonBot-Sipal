@@ -35,14 +35,11 @@ function saveHistory(entry) {
 }
 
 // Smart Daily Stats Manager
+// Smart Daily Stats Manager
 function getDailyStats() {
-    let stats = JSON.parse(fs.readFileSync(DAILY_STATS_FILE, 'utf8'));
-    const today = new Date().toISOString().split('T')[0];
-
-    // Reset if new day
-    if (stats.date !== today) {
-        stats = {
-            date: today,
+    try {
+        const defaultStats = {
+            date: new Date().toISOString().split('T')[0],
             transactions: {},
             faucetClaims: {},
             totalVolume: {},
@@ -52,9 +49,50 @@ function getDailyStats() {
             payments: {},
             swaps: {}
         };
-        fs.writeFileSync(DAILY_STATS_FILE, JSON.stringify(stats, null, 2));
+
+        if (!fs.existsSync(DAILY_STATS_FILE)) {
+            try {
+                fs.writeFileSync(DAILY_STATS_FILE, JSON.stringify(defaultStats, null, 2));
+            } catch (e) { /* Ignore write error */ }
+            return defaultStats;
+        }
+
+        let stats;
+        try {
+            const content = fs.readFileSync(DAILY_STATS_FILE, 'utf8');
+            stats = JSON.parse(content);
+        } catch (e) {
+            // File corrupted or empty, reset
+            try {
+                fs.writeFileSync(DAILY_STATS_FILE, JSON.stringify(defaultStats, null, 2));
+            } catch (writeErr) { /* Ignore */ }
+            return defaultStats;
+        }
+
+        const today = new Date().toISOString().split('T')[0];
+
+        // Reset if new day
+        if (stats.date !== today) {
+            stats = defaultStats;
+            try {
+                fs.writeFileSync(DAILY_STATS_FILE, JSON.stringify(stats, null, 2));
+            } catch (e) { /* Ignore */ }
+        }
+        return stats;
+    } catch (criticalError) {
+        // Absolute fallback to prevent crash
+        return {
+            date: new Date().toISOString().split('T')[0],
+            transactions: {},
+            faucetClaims: {},
+            totalVolume: {},
+            shields: {},
+            unshields: {},
+            bridges: {},
+            payments: {},
+            swaps: {}
+        };
     }
-    return stats;
 }
 
 function updateDailyStats(category, key, amount = 1) {
@@ -819,10 +857,18 @@ class FlutonAccount {
         }
 
         // ==================== TASK 4: UNSHIELD (from confidential tokens) ====================
-        await this.performUnshield(netConfig, cofheBridge || fhevmBridge, bridgeAddr || fhevmBridgeAddr);
+        try {
+            await this.performUnshield(netConfig, cofheBridge || fhevmBridge, bridgeAddr || fhevmBridgeAddr);
+        } catch (e) {
+            log(this.index, 'WARN', `Unshield task failed: ${e.message}`);
+        }
 
         // ==================== TASK 5: CROSS-CHAIN BRIDGE ====================
-        await this.performBridge(netConfig, cofheBridge, bridgeAddr);
+        try {
+            await this.performBridge(netConfig, cofheBridge, bridgeAddr);
+        } catch (e) {
+            log(this.index, 'WARN', `Bridge task failed: ${e.message}`);
+        }
     }
 
     // Unshield: Convert confidential tokens back to regular tokens
@@ -1019,12 +1065,16 @@ class FlutonAccount {
         }
 
         for (const netKey of networks) {
-            if (await this.switchNetwork(netKey)) {
-                await this.interactFaucet();
-                await this.interactTokens();
-                await this.interactConfidentialTokens(); // NEW: Handle confidential tokens
-                await this.interactRWATokens(); // NEW: Handle RWA tokens
-                await sleep(getRandomDelay(3, 5));
+            try {
+                if (await this.switchNetwork(netKey)) {
+                    await this.interactFaucet();
+                    await this.interactTokens();
+                    await this.interactConfidentialTokens(); // NEW: Handle confidential tokens
+                    await this.interactRWATokens(); // NEW: Handle RWA tokens
+                    await sleep(getRandomDelay(3, 5));
+                }
+            } catch (e) {
+                log(this.index, 'ERROR', `Routine error on ${netKey}: ${e.message}`);
             }
         }
 
